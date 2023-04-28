@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %}
+{% block title %}
+    MobileStop | Password Change
+{% endblock title %}
+{% block main %}
+
+<div class="container-ac my-5">
+  <div class="row">
+    <h3>Welcome <span class="text-capitalize"> {{request.user}} </span></h3>
+
+    <div class="col-sm-2 border-end">
+      <ul class="list-unstyled">
+        {% comment %}
+        <li class="d-grid">
+          <a href="#" class="btn btn-primary">Password Changed Done</a>
+        </li>
+        {% endcomment %}
+      </ul>
+    </div>
+
+    <div class="col-sm-6 offset-sm-1">
+      <h3>Password Changed Successfully!!</h3>
+
+      {% comment %} <div>
+        <iframe
+          src="https://giphy.com/gifs/DefyTVNetwork-duck-dynasty-defytv-pdSncNyYgaH0wqaCqp"
+          width="100"
+          height="200"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main %}
