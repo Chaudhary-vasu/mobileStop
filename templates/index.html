@@ -5,40 +5,55 @@
 {% endblock title %}
 {% block main %}
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+
+  <div class="image-banner">
+    <h1>Welcome</h1>
+    <p>Welcome to our mobile shopping website, your one-stop-shop for all your mobile needs! Our website offers a wide variety of the latest mobile phones, accessories, and gadgets from all the top brands at competitive prices.
+
+      At our website, we strive to provide you with the best shopping experience possible.Our secure payment options ensure that your transactions are safe and hassle-free.
+      
+      We understand that mobile phones are an integral part of our lives, and that's why we offer a range of products that cater to all your needs, whether you're looking for a high-end smartphone, a basic feature phone, or a stylish accessory to enhance your phone's functionality.
+      
+      Our team of experts keeps up-to-date with the latest trends and technologies in the mobile industry to bring you the most innovative and cutting-edge products.
+      
+      Thank you for choosing our website as your mobile shopping destination. We look forward to serving you and exceeding your expectations!</p>
+  </div>
+  
+    {% comment %} <div class="carousel-inner">
         <br>
       <div class="carousel-item active">
-        <img class = "image-size" src="{% static 'images\banner-4.jpg' %}" class="d-block w-100" alt="...">
+        <img class = "image-banner" src="{% static 'images\banner-4.png' %}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img class = "image-size" src="{% static 'images\banner-3.jpg' %}" class="d-block w-100" alt="...">
+        <img class = "image-banner" src="{% static 'images\banner-6.jpg' %}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img class = "image-size" src="{% static 'images\banner-2.jpg' %}" class="d-block w-100" alt="...">
+        <img class = "image-banner" src="{% static 'images\banner-0.jpg' %}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img class = "image-size" src="{% static 'images\banner-1.jpg' %}" class="d-block w-100" alt="...">
+        <img class = "image-banner" src="{% static 'images\banner-1.jpg' %}" class="d-block w-100" alt="...">
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    </div> {% endcomment %}
+    
   </div>
 
   <div class = "container mt-5 p-5">
     <h1>Products</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ea ratione veritatis.
-        Corporis deleniti molestiae,<br> saepe quod obcaecati delectus.Inventore repudiandae praesentium possimus, commodi quidem labore placeat similique autem exercitationem.<br>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, tempora,nulla illum inventore expedita <br> soluta facilis sint eum sapiente atque officia alias architecto nihil, minus maiores ipsam voluptate porro perspiciatis.</p>
+    <p>Discover our latest mobile devices and accessories!<br>
+      Phone cases and covers , 
+      Screen protectors,
+      Portable chargers and power banks,<br>
+      Earphones and headphones,
+      Bluetooth speakers,
+      Selfie sticks,<br>
+      Mobile gaming controllers,
+      Popsockets and phone grips,
+      Car mounts and holders.
+      </p>
   </div>
   <br>
     <div class = "container">
-    <h2 class = "text-center">Latest Mobiles</h2>
+    <h2 class = "text-center"></h2>
     {% for i in product %}
     <div class ="row-container mobile-home">
         <div class = "col-md-4 col-sm-4 mi-go wow fadeInUp"
@@ -57,4 +72,4 @@
     {% endfor %}
   <br><br>
   </div>
-{% endblock main %} 
+{% endblock main %}  

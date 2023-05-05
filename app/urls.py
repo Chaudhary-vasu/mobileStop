@@ -6,6 +6,7 @@ from django.contrib.auth import views as auth_view
 from app.forms import LoginForm,ResetPassword,ChangePasswordForm
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LogoutView
+
 urlpatterns = [
     path('', views.home),
     path('category/<slug:value>',views.Category.as_view(),name = "category"),
@@ -15,11 +16,13 @@ urlpatterns = [
     path('contact-us', views.contact,name = "contact"),
     
     path('profile/', views.ProfileView.as_view(),name = "profile"),
+    path('', views.add_comment, name='add_comment'),
     path('address/', views.address,name = "address"),
     path('update-address/<int:pk>',views.UpdateAddress.as_view(),name = 'updateAddress'),
     path('delete-address/<int:pk>',views.deleteAddress,name='delete_address'),    
     #login 
     path('registration', views.CustomerRegistrationView.as_view(),name = "customerregistration"),
+    path('verify/<slug>',views.verify,name = "verify"),
     path('accounts/login/', auth_view.LoginView.as_view(template_name = "login.html"),name = "loginuser"),
     path('accounts/', include('allauth.urls')),
 
@@ -46,4 +49,5 @@ urlpatterns = [
     
     path('search/',views.search,name = "search"),
     path('wishlist',views.wishlist,name = "wishlist"),
+
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

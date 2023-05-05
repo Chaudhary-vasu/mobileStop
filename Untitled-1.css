@@ -1,0 +1,200 @@
+
+.comment{ display: block; transition: all 1s;}
+
+.commentClicked{min-height: 0px; border: 1px solid #eee; border-radius: 5px; padding: 5px 10px}
+
+textarea{width: 100%; border: none; background: #E8E8E8; padding: 5px 10px; height: 50%;border-radius: 5px 5px 0px 0px; border-bottom: 2px solid #016BA8; transition: all 0.5s;margin-top: 15px;}
+
+button.primaryContained{ background: #016ba8; color: #fff; padding: 10px 10px; border: none; margin-top: 0px; cursor: pointer; text-transform: uppercase; letter-spacing: 4px; box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.25); transition: 1s all; font-size: 10px; border-radius: 5px;}
+
+button.primaryContained:hover{ background: #9201A8; }
+
+.left-align{
+   margin-left: 60px;
+}
+
+.comments-section {
+    width: 45%;
+    margin-left: 50px;
+    margin-top: 20px;
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+  }
+  
+  .comments-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .comment {
+    margin-bottom: 20px;
+  }
+  
+  .comment-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .comment-meta h3 {
+    margin-top: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .comment-meta span {
+    font-size: 14px;
+    /* color: #666; */
+  }
+  
+  .comment p {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  
+  form {
+    width: 40%;
+    margin-left: 20px; /* To add some spacing between the comment section and the form */
+  }
+  .row-wise{
+    display: flex;
+    flex-direction: col;
+  }
+  form label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  form textarea {
+    width: 300%;
+    height: 100px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  .submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+ .add-comment{
+    float: right;
+    margin-top: 40px;
+ }
+
+
+ /* Share Button */
+ /* Styles */
+ .share-button {
+ font-family: 'Roboto';
+ background-color: #e5eef3;
+ text-align: center;
+ color: #f1ce64;
+ font-size: 28px;
+ }
+ 
+ .link {
+ color: #f1ce64;
+ }
+ 
+ .share {
+ /* position: absolute; */
+ width: 100px;
+ left: 10%;
+ transform: translateX(-50%);
+ top: 50%;
+ transform: translateY(-50%);
+ border-radius: 80px;
+ }
+ 
+ .share span {
+ width: 200px;
+ line-height: 80px;
+ display: inline-block;
+ font-weight: 700;
+ text-transform: uppercase;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ opacity: 1;
+ transition: opacity 0.3s ease-in-out;
+ pointer-events: none;
+ }
+ 
+ .share nav {
+ font-size: 0;
+ }
+ 
+ .share a {
+ line-height: 80px;
+ width: 80px;
+ text-align: center;
+ display: inline-block;
+ background-color: #ffffff;
+ color: #ffffff;
+ overflow: hidden;
+ opacity: 1;
+ transition: all 0.3s ease-in-out;
+ margin: 0 -20px;
+ box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .share a:nth-child(1) {
+ border-top-left-radius: 40px;
+ border-bottom-left-radius: 40px;
+ margin-left: 0;
+ }
+ 
+ .share a:nth-child(1):hover {
+ background-color: var(#61c5ec);
+ }
+ 
+ .share a:nth-child(2):hover {
+ background-color: var(#3B5988);
+ }
+ 
+ .share a:nth-child(3):hover {
+ background-color: var(#ea4335);
+ }
+ 
+ .share a:nth-child(4) {
+ border-top-right-radius: 40px;
+ border-bottom-right-radius: 40px;
+ margin-right: 0;
+ }
+ 
+ .share a:nth-child(4):hover {
+ background-color: var(#000000);
+ }
+ 
+ .share:hover span,
+ .share.hover span {
+ opacity: 0;
+ }
+ 
+ .share:hover a,
+ .share.hover a {
+ border-radius: 50%;
+ margin: 0 10px;
+ color: #f1ce64;
+ font-size: 28px;
+ }
+ 
+ .share:hover a:hover,
+ .share.hover a:hover {
+ color: var(#fff);
+ }  
+ 

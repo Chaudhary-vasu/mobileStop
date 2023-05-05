@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 import os
 import environ
 # Initialise environment variables
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'django_social_share',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -184,3 +186,10 @@ SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/profile'
 LOGOUT_REDIRECT_URL = 'accounts/login/'
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'vasuchaudharywork@gmail.com'
+EMAIL_HOST_PASSWORD = 'wiwouejdjgtcrayf'

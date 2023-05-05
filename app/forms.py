@@ -57,3 +57,10 @@ class ChangePasswordForm(PasswordChangeForm):
     old_password = forms.CharField(label='Old Password',widget = forms.PasswordInput(attrs={'autofocus':True,'autocomplete':'current-password','class':'form-control'}))
     new_password1 = forms.CharField(label='New Password',widget = forms.PasswordInput(attrs={'autocomplete':'current-password','class':'form-control'}))    
     new_password2 = forms.CharField(label='Confirm Password',widget = forms.PasswordInput(attrs={'autocomplete':'current-password','class':'form-control'}))
+    
+    
+class ContactUsForm(forms.Form):
+    name = forms.CharField(label = 'Name')
+    email = forms.EmailField(label='Email',widget=forms.EmailInput(attrs={'class':'form-control'}))
+    subject = forms.CharField(label = 'Subject')
+    message = forms.CharField(label = "Message",widget = forms.Textarea)

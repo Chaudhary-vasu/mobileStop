@@ -1,7 +1,10 @@
+from datetime import timezone
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.contrib.auth.models import AbstractUser
-from .manager import UserManager
+from app.manager import UserManager
+
+import uuid
 # Create your models here.
 
 CATEGORY_CHOICES = (
@@ -43,26 +46,42 @@ class Product(models.Model):
 class CustomUser(AbstractUser):
     username = None 
     email = models.EmailField(unique=True)
+    token = models.CharField(max_length=200,default="")
+    is_verified = models.BooleanField(default=False)
     
     objects = UserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     
     def __str__(self):
-        return self.email
-    
+        return str(self.email)
+
 class Customer(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
-    # email = models.EmailField(unique=True,default="")
-    name = models.CharField(max_length=200)
-    locality = models.CharField(max_length=200)
-    city = models.CharField(max_length=50)
-    mobile = models.IntegerField(default=0)
-    zipcode = models.IntegerField()
-    state = models.CharField(choices = STATE_CHOICES,max_length=100)
+    # token = models.CharField(max_length=200)
+    # is_verified = models.BooleanField(default=False)
+    name = models.CharField(max_length=200,default="",blank=True,null=True)
+    locality = models.CharField(max_length=200,blank=True,null=True)
+    city = models.CharField(max_length=50,blank=True,null=True)
+    mobile = models.IntegerField(default=0,blank=True,null=True)
+    zipcode = models.IntegerField(blank=True,null=True)
+    state = models.CharField(choices = STATE_CHOICES,max_length=100,blank=True,null=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
+    
+# class Customer(models.Model):
+#     user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
+#     # email = models.EmailField(unique=True,default="")
+#     name = models.CharField(max_length=200)
+#     locality = models.CharField(max_length=200)
+#     city = models.CharField(max_length=50)
+#     mobile = models.IntegerField(default=0)
+#     zipcode = models.IntegerField()
+#     state = models.CharField(choices = STATE_CHOICES,max_length=100)
+
+#     def __str__(self):
+#         return self.name
     
 class Cart(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
@@ -97,3 +116,9 @@ class OrderPlaced(models.Model):
 class Wishlist(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    
+class CommentSection(models.Model):
+    name = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
+    comment = models.CharField(max_length=2000,default="")
+    product = models.ForeignKey(Product,on_delete=models.CASCADE,default='')
+    created_at = models.DateTimeField(auto_now_add=True)

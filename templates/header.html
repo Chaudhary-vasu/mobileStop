@@ -1,8 +1,8 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark navbar-color sticky-top">
+<nav class="navbar-height navbar navbar-expand-lg navbar-dark navbar-color sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-      <img src="{% static '/images/logo.webp' %}" width="50" height="40" alt="Not Loaded">  
+      <img src="{% static '/images/logo.png' %}" width="180" height="50" alt="Not Loaded">  
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -46,12 +46,11 @@
         </li>
       </ul>
       <form style = "display:contents" role="search" action = "search/">
-        <input style = "width:250px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name = "search">
-        <button style = "margin-right:50px" class="btn btn-outline-warning" type="submit">Search</button>
+        <input style = "width:250px;" id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name = "search">
+        <button style = "margin-right:50px" class="btn btn-light" type="submit">Search</button>
       </form>
-    </div>
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{request.user}}
@@ -70,9 +69,6 @@
           <li class="nav-item text-white mx-2">
             <a class="nav-link active" aria-current="page" href="{% url 'showcart' %}">Cart</a>
           </li>
-          <li class="nav-item text-white mx-2">
-            <a class="nav-link active" aria-current="page" href="{% url 'wishlist' %}">Wishlist</a>
-          </li>
           {% else %}
           <li class="nav-item text-white mx-2">
             <a class="nav-link active" aria-current="page" href="{% url 'loginuser' %}">Login</a>
@@ -81,7 +77,8 @@
             <a class="nav-link active" aria-current="page" href="{% url 'customerregistration' %}">Register</a>
           </li>
           {% endif %}
-        </ul>
+      </ul>
+      </ul>
+      </div>
   </div>
 </nav>
-</div>
