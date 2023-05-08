@@ -116,68 +116,6 @@
 }
 
 
-/* Product Details Page Mobile Image */
-
-@media only screen and (min-width: 375px) and (max-width: 767px){
-  .marg-top {
-    margin-top: 0rem;
-    margin-left: 1rem;
-  }
-  .img2 img {
-    margin-top: -0.5rem;
-    margin-left: 5rem;
-    flex: 0 0 auto;
-    height: 18rem;
-    width: 16rem;
-}
-
-.productdetail h2{
-  margin-left: 5rem;
-  font-size: 2.2rem;
-  margin-top: 0.5rem;
-  font-family: emoji;
-}
-
-.productdetail h5,h4{
-  margin-left: 5rem;
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-family: emoji;
-}
-.productdetail del{
-  margin-left: 4.5rem;
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-family: emoji;
-}
-.productdetail small{
-  margin-left: 5rem;
-  font-size: 2.2rem;
-  margin-top: 0.5rem;
-  font-family: emoji;
-}
-.productdetail li{
-  margin-right: 2rem;
-  margin-left: 2rem;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  font-family: emoji;
-}
-.submit {
-  padding-left: 1rem;
-  height: 3.2rem;
-  width: 9rem;
-  margin-top: 10px;
-  margin-left: 10px;
-  color: white;
-  border: none;
-  font-size: 16px;
-  border-radius: 10px;
-}
-}
-
-
-
 /* .image-banner{
     object-fit:fill;
     width: 100%;
@@ -618,7 +556,7 @@ button.primaryContained:hover {
 }
 
 form {
-  width: 85%;
+  width: 30%;
   margin-left: 20px; /* To add some spacing between the comment section and the form */
 }
 .row-wise {
@@ -644,8 +582,8 @@ form textarea {
 }
 .submit {
   background-color: #5380ab;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 1rem;
+  margin-left: 2rem;
   color: white;
   border: none;
   padding: 10px;
@@ -653,7 +591,10 @@ form textarea {
   cursor: pointer;
   border-radius: 10px;
 }
-
+.marg-left{
+  margin-left: 10.7rem;
+  width: 8rem;
+}
 /* form button[type="submit"]:hover {
     background-color: #3e8e41;
   } */
@@ -666,6 +607,7 @@ form textarea {
 
 .main-content {
   min-height: 59vh;
+  overflow-x: hidden;
 }
 .content-about {
   min-height: 75vh;
@@ -842,3 +784,223 @@ form textarea {
   background-position: 12px 11px;
 }
 
+/* Product Details Page Mobile Image */
+
+@media screen and (min-width: 318px) and (max-width:767px){
+  .marg-top {
+    margin-top: 0rem;
+    margin-left: 1rem;
+  }
+  .img2 img {
+    margin-top: -0.5rem;
+    margin-left: 5rem;
+    flex: 0 0 auto;
+    height: 18rem;
+    width: 16rem;
+}
+
+.productdetail h2{
+  margin-left: 5rem;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 100%;
+}
+
+.productdetail h5,h4{
+  margin-left: 5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 10rem;
+}
+.productdetail del{
+  margin-left: 0rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+}
+.productdetail small{
+  margin-left: 5rem;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+}
+.productdetail li{
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 16rem;
+}
+.submit {
+  padding-left: 1.4rem;
+  height: 3.2rem;
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 2.5rem;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.form {
+  width: 10rem;
+  margin-top: -3rem;
+  margin-left: -4rem; /* To add some spacing between the comment section and the form */
+}
+.row-wise {
+  display: flex;
+  flex-direction: col;
+}
+.form label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form h2{
+  width: 13rem;
+}
+.form textarea {
+  width: 20.5rem;
+  height: 100px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  resize: vertical;
+}
+.submit-comm {
+  padding-left: 1.4rem;
+  height: 3.2rem;
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 1.3rem;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.marg-left{
+  margin-left: 31.7rem;
+}
+}
+
+/* Product Details Media Query for tablet Device */
+
+@media screen and (min-width: 768px) and (max-width:1440px){
+  .marg-top {
+    margin-top: 0rem;
+    margin-left: 1rem;
+  }
+  .img2 img {
+    margin-top: -2.0rem;
+    margin-left: 12rem;
+    flex: 0 0 auto;
+    height: 22rem;
+    width: 24rem;
+}
+
+.productdetail h2{
+  margin-left: 12rem;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 100%;
+}
+
+.productdetail h5,h4{
+  margin-left: 12rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 10rem;
+}
+.productdetail del{
+  margin-left: 0rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+}
+.productdetail small{
+  margin-left: 12rem;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+}
+.productdetail li{
+  margin-right: 2rem;
+  margin-left: 12rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-family: emoji;
+  width: 60rem;
+}
+.submit {
+  padding-left: 1.4rem;
+  height: 3.2rem;
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 30.5rem;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.submit-comm {
+  padding-left: 1.4rem;
+  height: 3.2rem;
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 9.7rem;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.marg-left{
+  margin-left: 31.7rem;
+}
+.form {
+  width: 10rem;
+  margin-top: -3rem;
+  margin-left: 0rem; /* To add some spacing between the comment section and the form */
+}
+.row-wise {
+  display: flex;
+  flex-direction: col;
+}
+.form label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form h2{
+  width: 35rem;
+}
+.form textarea {
+  width: 30.5rem;
+  height: 100px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  resize: vertical;
+}
+.submit-comm {
+  padding-left: 1.4rem;
+  height: 3.2rem;
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 1.3rem;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+}
+}
