@@ -591,10 +591,7 @@ form textarea {
   cursor: pointer;
   border-radius: 10px;
 }
-.marg-left{
-  margin-left: 10.7rem;
-  width: 8rem;
-}
+
 /* form button[type="submit"]:hover {
     background-color: #3e8e41;
   } */
@@ -783,7 +780,6 @@ form textarea {
   background-repeat: no-repeat;
   background-position: 12px 11px;
 }
-
 /* Product Details Page Mobile Image */
 
 @media screen and (min-width: 318px) and (max-width:767px){
@@ -798,7 +794,9 @@ form textarea {
     height: 18rem;
     width: 16rem;
 }
-
+.marg-left{
+  margin-left: 4rem;
+}
 .productdetail h2{
   margin-left: 5rem;
   font-size: 1.8rem;
@@ -885,7 +883,7 @@ form textarea {
   border-radius: 10px;
 }
 .marg-left{
-  margin-left: 31.7rem;
+  margin-left: 3.8rem;
 }
 }
 
@@ -961,9 +959,6 @@ form textarea {
   font-size: 16px;
   border-radius: 10px;
 }
-.marg-left{
-  margin-left: 31.7rem;
-}
 .form {
   width: 10rem;
   margin-top: -3rem;
@@ -1002,5 +997,8 @@ form textarea {
   border: none;
   font-size: 16px;
   border-radius: 10px;
+}
+.marg-left{
+  margin-left: 31.8rem;
 }
 }
